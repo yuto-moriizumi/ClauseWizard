@@ -10,6 +10,11 @@ Currently supports both savegames and files from:
 * **Hearts of Iron 4**
 * **Stellaris**
 
+## Note
+This project was originally developed by Shadark.
+But it's maintenance seems to be abandoned.
+This is why I forked his project.
+
 ---
 
 * Compressed games: **supported**.

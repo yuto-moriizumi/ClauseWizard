@@ -29,6 +29,8 @@ def parse_grammar(txt, debug=False):
     integer = pp.Regex(r"[+-]?\d+").setParseAction(lambda x: int(x[0]))
     yes = pp.CaselessKeyword("yes").setParseAction(pp.replaceWith(True))
     no = pp.CaselessKeyword("no").setParseAction(pp.replaceWith(False))
+    LT = pp.CaselessKeyword("<")
+    GT = pp.CaselessKeyword(">")
 
     # Convert strings to date
     def convert_to_date(s, loc, tokens):
@@ -54,7 +56,7 @@ def parse_grammar(txt, debug=False):
     str_types = (pp.dblQuotedString | unQuotedString)
     str_types.setName('str_types')
     obj = pp.Forward()
-    phrase = (str_types + EQ + (pp.Group(obj | data)))
+    phrase = (str_types + (EQ | LT | GT) + pp.Group(obj | data))
     phrase.setName('phrase')
     data_obj = (pp.OneOrMore(pp.Group(obj)) | pp.OneOrMore(pp.Group(phrase)) | pp.OneOrMore(pp.Group(data)))
     data_obj.setName('data_obj')
