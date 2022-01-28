@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/Shadark/ClauseWizard.svg?branch=master)](https://travis-ci.com/Shadark/ClauseWizard) [![PyPI version](https://badge.fury.io/py/ClauseWizard.svg)](https://badge.fury.io/py/ClauseWizard) ![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)
 
-# ClauseWizard
+# ClauseWizard (Continued?)
 Python-based JSON parser for files from the Clausewitz engine, used in multiple Paradox Interactive games. You can open the resulting files with any text editor, but since the file size can exceed the allowed limit for some editors,  you can use other software such as [HugeJsonViewer](https://github.com/WelliSolutions/HugeJsonViewer).
 
 Currently supports both savegames and files from:
